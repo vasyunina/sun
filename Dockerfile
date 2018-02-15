@@ -89,7 +89,7 @@ WORKDIR $PSRHOME
 # Pull all repos
 RUN wget http://www.atnf.csiro.au/people/pulsar/psrcat/downloads/psrcat_pkg.tar.gz && \
     tar -xvf psrcat_pkg.tar.gz -C $PSRHOME && \
-    git clone git://git.code.sf.net/p/tempo/tempo && \
+    #git clone git://git.code.sf.net/p/tempo/tempo && \
     git clone https://github.com/scottransom/presto.git && \
     git clone https://github.com/scottransom/pyslalib.git
 
