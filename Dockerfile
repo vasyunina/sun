@@ -64,7 +64,10 @@ RUN apt-get -y clean
 RUN pip install pip -U && \
     pip install setuptools -U && \
     pip install numpy -U && \
-	pip install sunpy -U && \	
+	pip install sunpy -U && \
+	pip install requests -U && \
+    pip install suds -U && \
+    pip install bs4 -U && \	
     pip install scipy==0.19.0 -U && \
     pip install matplotlib -U && \
     easy_install scikit-learn==0.12.1 && \
@@ -89,7 +92,7 @@ WORKDIR $PSRHOME
 # Pull all repos
 RUN wget http://www.atnf.csiro.au/people/pulsar/psrcat/downloads/psrcat_pkg.tar.gz && \
     tar -xvf psrcat_pkg.tar.gz -C $PSRHOME && \
-    #git clone git://git.code.sf.net/p/tempo/tempo && \
+    git clone git://git.code.sf.net/p/tempo/tempo && \
     git clone https://github.com/scottransom/presto.git && \
     git clone https://github.com/scottransom/pyslalib.git
 
